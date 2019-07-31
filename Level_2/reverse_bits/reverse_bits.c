@@ -1,8 +1,11 @@
 #include <stdio.h>
 
-unsigned char	reverse_bits(unsigned char octet);
-int main(void)
+unsigned char reverse_bits(unsigned char octet)
 {
-    printf("%i",reverse_bits('b'));
-    return (0);
+    return (((octet >> 0) & 1) << 7) | (((octet >> 1) & 1) << 6) | (((octet >> 2) & 1) << 5) |
+           (((octet >> 3) & 1) << 4) |
+           (((octet >> 4) & 1) << 3) |
+           (((octet >> 5) & 1) << 2) |
+           (((octet >> 6) & 1) << 1) |
+           (((octet >> 7) & 1) << 0);
 }
