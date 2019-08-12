@@ -37,12 +37,14 @@ void sort_int_tab(int *tab, unsigned int size)
 int main(void)
 {
 	int arr[] = { 3,1,4,5,2,9,7};
-	int n = 0;
+	int n = sizeof(arr)/ sizeof(arr[0]);
+	int i =0;
+	sort_int_tab(arr, n);
 
-	while(n < 7)
+	while(i < 7)
 	{
-		printf("%d", sort_int_tab(&arr[n], 7));
-		n++;
+		printf("%d", arr[i]);
+		i++;
 	}
 	return(0);
 }
