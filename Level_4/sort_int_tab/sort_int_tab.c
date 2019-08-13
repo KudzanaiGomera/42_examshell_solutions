@@ -16,7 +16,7 @@ void sort_int_tab(int *tab, unsigned int size)
 {
 	unsigned int i = 0;
 	unsigned int j;
-	unsigned int temp;
+	int temp;
 
 	while(i < size - 1)
 	{
@@ -43,7 +43,7 @@ int main(void)
 
 	while(i < 7)
 	{
-		printf("%d", arr[i]);
+		printf("%d\n", arr[i]);
 		i++;
 	}
 	return(0);
