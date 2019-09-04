@@ -16,18 +16,19 @@ void sort_int_tab(int *tab, unsigned int size)
 {
 	unsigned int i = 0;
 	unsigned int j;
-	int temp;
+	int tmp;
 
 	while(i < size - 1)
 	{
 		j = i;
+		
 		while(j < size)
 		{
-			if (tab[i] > tab[j])
+			if(tab[i] > tab[j])
 			{
-				temp = tab[i];
+				tmp = tab[i];
 				tab[i] = tab[j];
-				tab[j] = temp;
+				tab[j] = tmp;
 			}
 			j++;
 		}
@@ -36,15 +37,15 @@ void sort_int_tab(int *tab, unsigned int size)
 }
 int main(void)
 {
-	int arr[] = { 3,1,4,5,2,9,7};
-	int n = sizeof(arr)/ sizeof(arr[0]);
-	int i =0;
-	sort_int_tab(arr, n);
-
-	while(i < 7)
+	int arr[] = { 2,7,3,1,9,3};
+	int size = sizeof(arr)/sizeof(arr[0]);
+	int i = 0;
+	
+	sort_int_tab(arr, size);
+	while(i < 6)
 	{
-		printf("%d\n", arr[i]);
+		printf("%i", arr[i]);
 		i++;
 	}
-	return(0);
+	return (0);
 }
